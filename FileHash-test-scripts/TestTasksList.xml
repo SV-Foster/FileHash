@@ -1,0 +1,543 @@
+<TestTasksList>
+	<Task>
+		<ID>1</ID>
+		<Description>Start w/o args</Description>
+		<Args></Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task>
+		<ID>2</ID>
+		<Description>Start w/garbage args</Description>
+		<Args>zmlu0pOH09 /QGj1f4sd7w --D9ZsTd2O1M -69tMKikcsM /cL0vwfsXV6=2aU7lH2RTh !EKZZaKntS3 @ycbOPT9P5e FBAhPVddYv KhZipbUoGN</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task>
+		<ID>3</ID>
+		<Description>Start w/help parameter w/garbage args</Description>
+		<Args>zmlu0pOH09 /QGj1f4sd7w --D9ZsTd2O1M -69tMKikcsM /help /cL0vwfsXV6=2aU7lH2RTh !EKZZaKntS3 @ycbOPT9P5e FBAhPVddYv KhZipbUoGN</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task>
+		<ID>4</ID>
+		<Description>Start w/help parameter w/garbage args</Description>
+		<Args>zmlu0pOH09 /QGj1f4sd7w --D9ZsTd2O1M -69tMKikcsM /? /cL0vwfsXV6=2aU7lH2RTh !EKZZaKntS3 @ycbOPT9P5e FBAhPVddYv KhZipbUoGN</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task>
+		<ID>5</ID>
+		<Description>Start w/help parameter alone</Description>
+		<Args>/help</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task>
+		<ID>6</ID>
+		<Description>Start w/help parameter alone</Description>
+		<Args>/?</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>7</ID>
+		<Description>Wrong command</Description>
+		<Args>0 demo.checkfile .\</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>8</ID>
+		<Description>No command</Description>
+		<Args>demo.checkfile .\</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>9</ID>
+		<Description>No command</Description>
+		<Args>/overwrite demo.checkfile .\</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>	
+	# command l
+	<Task> 
+		<ID>10</ID>
+		<Description>l wrong args</Description>
+		<Args>l #StartFolder#0010-wildcard-MD5.checkfile #StartFolder#0010bad</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>11</ID>
+		<Description>l wrong switch</Description>
+		<Args>l /bad #StartFolder#0010-wildcard-MD5.checkfile</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>12</ID>
+		<Description>l wrong checkfile path</Description>
+		<Args>l #StartFolder#0010-wildcard-MD5-bad</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>55</ID>
+		<Description>l checkfile w/wildcards</Description>
+		<Args>l #StartFolder#00??-wildcard-MD5-b*d</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>		
+	<Task> 
+		<ID>13</ID>
+		<Description>l correct call IA-32</Description>
+		<Args>l #StartFolder#IA-32\0010-wildcard-MD5.checkfile</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>	
+	<Task> 
+		<ID>53</ID>
+		<Description>l correct call x86-64</Description>
+		<Args>l #StartFolder#x86-64\0010-wildcard-MD5.checkfile</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>		
+	# command v
+	<Task> 
+		<ID>14</ID>
+		<Description>v wrong params count</Description>
+		<Args>v #StartFolder##SubFolderPlatform#0010-wildcard-MD5.checkfile #StartFolder#0010bad #DemosFolder#</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>15</ID>
+		<Description>v wrong switch</Description>
+		<Args>v /bad #StartFolder##SubFolderPlatform#0010-wildcard-MD5.checkfile #DemosFolder#</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>16</ID>
+		<Description>v not enough params</Description>
+		<Args>v #StartFolder##SubFolderPlatform#0010-wildcard-MD5.checkfile</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>17</ID>
+		<Description>v wrong checkfile path</Description>
+		<Args>v #StartFolder##SubFolderPlatform#0010-wildcard-MD5-bad #DemosFolder#</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>21</ID>
+		<Description>v checkfile w/wildcards</Description>
+		<Args>v #StartFolder##SubFolderPlatform#0010-wildcard-MD?.checkfi* #DemosFolder#</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>	
+	<Task> 
+		<ID>18</ID>
+		<Description>v correct call IA-32</Description>
+		<Args>v #StartFolder#IA-32\0010-wildcard-MD5.checkfile #DemosFolder#</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>57</ID>
+		<Description>v correct call x86-64</Description>
+		<Args>v #StartFolder#x86-64\0010-wildcard-MD5.checkfile #DemosFolder#</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>	
+	<Task> 
+		<ID>19</ID>
+		<Description>v found files w/emty folder</Description>
+		<Args>v #StartFolder##SubFolderPlatform#0010-wildcard-MD5.checkfile #DemosFolder#L13-empty</Args>
+		<ExitCodeExpected>3</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>20</ID>
+		<Description>v folder w/wildcards</Description>
+		<Args>v #StartFolder##SubFolderPlatform#0010-wildcard-MD5.checkfile #DemosFolder#L*</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>22</ID>
+		<Description>v checkfile is damaged (wrong file)</Description>
+		<Args>v #StartFolder##SubFolderPlatform#0016-bad-random.checksum #DemosFolder#</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>23</ID>
+		<Description>v checkfile is damaged (bad header @ 0x00)</Description>
+		<Args>v #StartFolder##SubFolderPlatform#0011-bad-sig.checksum #DemosFolder#</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>24</ID>
+		<Description>v checkfile is damaged (bad header @ 0x08)</Description>
+		<Args>v #StartFolder##SubFolderPlatform#0012-bad-sig2.checksum #DemosFolder#</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>    
+	<Task> 
+		<ID>25</ID>
+		<Description>v checkfile is damaged (bad header @ 0x0C)</Description>
+		<Args>v #StartFolder##SubFolderPlatform#0013-bad-sig3.checksum #DemosFolder#</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>26</ID>
+		<Description>v checkfile is damaged (bad header @ 0x10)</Description>
+		<Args>v #StartFolder##SubFolderPlatform#0014-bad-sig4.checksum #DemosFolder#</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>27</ID>
+		<Description>v checkfile is damaged (bad header @ 0x12)</Description>
+		<Args>v #StartFolder##SubFolderPlatform#0015-bad-sig5.checksum #DemosFolder#</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>28</ID>
+		<Description>v found files w/hash mismatch</Description>
+		<Args>v #StartFolder##SubFolderPlatform#0017-1of3-mismatch.checksum #DemosFolder#</Args>
+		<ExitCodeExpected>3</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>	
+	# command c
+	<Task> 
+		<ID>54</ID>
+		<Description>c checkfile w/wildcards</Description>
+		<Args>c #TempFolder#abc*.checkfile #DemosFolder#</Args>
+		<ExitCodeExpected>4</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>		
+	# following tests w/TempRNDS should be executed at particular order!
+	<Task>
+		<ID>29</ID>
+		<Description>c w/new checkfile</Description>
+		<Args>c #TempFolder##TempRNDS# #DemosFolder#</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>30</ID>
+		<Description>c w/ checkfile existed</Description>
+		<Args>c #TempFolder##TempRNDS# #DemosFolder#</Args>
+		<ExitCodeExpected>5</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>31</ID>
+		<Description>c w/ checkfile existed, overwrite</Description>
+		<Args>c /overwrite #TempFolder##TempRNDS# #DemosFolder#</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>32</ID>
+		<Description>c and empty target folder</Description>
+		<Args>c /overwrite #TempFolder##TempRNDS# #DemosFolder#L13-empty\</Args>
+		<ExitCodeExpected>1</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>33</ID>
+		<Description>c and unexisting file</Description>
+		<Args>c #TempFolder##TempRND# #DemosFolder#nofile.txt</Args>
+		<ExitCodeExpected>5</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>34</ID>
+		<Description>c and unexisting folder</Description>
+		<Args>c #TempFolder##TempRND# #DemosFolder#nofolder\</Args>
+		<ExitCodeExpected>5</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	<Task> 
+		<ID>35</ID>
+		<Description>create new checkfile @ unexist loc</Description>
+		<Args>c #TempFolder#bad\name.checkfile #DemosFolder#</Args>
+		<ExitCodeExpected>5</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinaryExpected></BinaryExpected>
+		<BinarySample></BinarySample>
+	</Task>
+	
+	<Task>
+		<ID>36</ID>
+		<Description>create new checkfile with MD2</Description>
+		<Args>c /MD2 #TempFolder##TempRND# #DemosFolder#</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>TRUE</BinaryComp>
+		<BinaryExpected>#TempFolder##TempRND#</BinaryExpected>
+		<BinarySample>#StartFolder##SubFolderPlatform#0001-plain-MD2.checkfile</BinarySample>    
+	</Task>
+	<Task>
+		<ID>37</ID>
+		<Description>create new checkfile with MD4</Description>
+		<Args>c /MD4 #TempFolder##TempRND# #DemosFolder#</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>TRUE</BinaryComp>
+		<BinarySample>#StartFolder##SubFolderPlatform#0002-plain-MD4.checkfile</BinarySample>
+		<BinaryExpected>#TempFolder##TempRND#</BinaryExpected>
+	</Task>
+	<Task>
+		<ID>38</ID>
+		<Description>create new checkfile with MD5</Description>
+		<Args>c /MD5 #TempFolder##TempRND# #DemosFolder#</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>TRUE</BinaryComp>
+		<BinarySample>#StartFolder##SubFolderPlatform#0003-plain-MD5.checkfile</BinarySample>
+		<BinaryExpected>#TempFolder##TempRND#</BinaryExpected>
+	</Task>
+	<Task>
+		<ID>39</ID>
+		<Description>create new checkfile with SHA1</Description>
+		<Args>c /SHA1 #TempFolder##TempRND# #DemosFolder#</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>TRUE</BinaryComp>
+		<BinarySample>#StartFolder##SubFolderPlatform#0004-plain-SHA1.checkfile</BinarySample>
+		<BinaryExpected>#TempFolder##TempRND#</BinaryExpected>
+	</Task>
+	<Task>
+		<ID>40</ID>
+		<Description>create new checkfile with SHA256</Description>
+		<Args>c /SHA256 #TempFolder##TempRND# #DemosFolder#</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>TRUE</BinaryComp>
+		<BinarySample>#StartFolder##SubFolderPlatform#0005-plain-SHA256.checkfile</BinarySample>
+		<BinaryExpected>#TempFolder##TempRND#</BinaryExpected>
+	</Task>
+	<Task>
+		<ID>41</ID>
+		<Description>create new checkfile with SHA384</Description>
+		<Args>c /SHA384 #TempFolder##TempRND# #DemosFolder#</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>TRUE</BinaryComp>
+		<BinarySample>#StartFolder##SubFolderPlatform#0006-plain-SHA384.checkfile</BinarySample>
+		<BinaryExpected>#TempFolder##TempRND#</BinaryExpected>
+	</Task>
+	<Task>
+		<ID>42</ID>
+		<Description>create new checkfile with SHA512</Description>
+		<Args>c /SHA512 #TempFolder##TempRND# #DemosFolder#</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>TRUE</BinaryComp>
+		<BinarySample>#StartFolder##SubFolderPlatform#0007-plain-SHA512.checkfile</BinarySample>
+		<BinaryExpected>#TempFolder##TempRND#</BinaryExpected>
+	</Task>
+	<Task>
+		<ID>43</ID>
+		<Description>create new checkfile with ALL</Description>
+		<Args>c /algoALL #TempFolder##TempRND# #DemosFolder#</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>TRUE</BinaryComp>
+		<BinarySample>#StartFolder##SubFolderPlatform#0008-plain-ALL.checkfile</BinarySample>
+		<BinaryExpected>#TempFolder##TempRND#</BinaryExpected>
+	</Task>
+	<Task>
+		<ID>44</ID>
+		<Description>create new checkfile with ALL recursive</Description>
+		<Args>c /algoALL /recursive #TempFolder##TempRND# #DemosFolder#</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>TRUE</BinaryComp>
+		<BinarySample>#StartFolder##SubFolderPlatform#0009-recursive-ALL.checkfile</BinarySample>
+		<BinaryExpected>#TempFolder##TempRND#</BinaryExpected>
+	</Task>
+	<Task>
+		<ID>45</ID>
+		<Description>create new checkfile with WCard</Description>
+		<Args>c /MD5 #TempFolder##TempRND# #DemosFolder#*.txt</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>TRUE</BinaryComp>
+		<BinarySample>#StartFolder##SubFolderPlatform#0010-wildcard-MD5.checkfile</BinarySample>
+		<BinaryExpected>#TempFolder##TempRND#</BinaryExpected>
+	</Task>
+	<Task>
+		<ID>46</ID>
+		<Description>create new checkfile w/current directory set</Description>
+		<Args>c /MD5 #TempFolder##TempRND# *.txt</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>TRUE</BinaryComp>
+		<BinarySample>#StartFolder##SubFolderPlatform#0010-wildcard-MD5.checkfile</BinarySample>
+		<BinaryExpected>#TempFolder##TempRND#</BinaryExpected>
+		<WorkingDirectorySet>TRUE</WorkingDirectorySet>
+		<WorkingDirectory>#DemosFolder#</WorkingDirectory>
+	</Task>
+	<Task>
+		<ID>47</ID>
+		<Description>create new checkfile w/current directory set</Description>
+		<Args>c /MD5 #TempFolder##TempRND# .\*.txt</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>TRUE</BinaryComp>
+		<BinarySample>#StartFolder##SubFolderPlatform#0010-wildcard-MD5.checkfile</BinarySample>
+		<BinaryExpected>#TempFolder##TempRND#</BinaryExpected>
+		<WorkingDirectorySet>TRUE</WorkingDirectorySet>
+		<WorkingDirectory>#DemosFolder#</WorkingDirectory>
+	</Task>
+	<Task>
+		<ID>48</ID>
+		<Description>create new checkfile w/current directory set</Description>
+		<Args>c /MD5 ..\FileHash-test-temp\#TempRND# *.txt</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>TRUE</BinaryComp>
+		<BinarySample>#StartFolder##SubFolderPlatform#0010-wildcard-MD5.checkfile</BinarySample>
+		<BinaryExpected>#TempFolder##TempRND#</BinaryExpected>
+		<WorkingDirectorySet>TRUE</WorkingDirectorySet>
+		<WorkingDirectory>#DemosFolder#</WorkingDirectory>
+	</Task>
+	<Task>
+		<ID>49</ID>
+		<Description>create new checkfile w/current directory set</Description>
+		<Args>c /MD5 ..\FileHash-test-temp\#TempRND# .\*.txt</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>TRUE</BinaryComp>
+		<BinarySample>#StartFolder##SubFolderPlatform#0010-wildcard-MD5.checkfile</BinarySample>
+		<BinaryExpected>#TempFolder##TempRND#</BinaryExpected>
+		<WorkingDirectorySet>TRUE</WorkingDirectorySet>
+		<WorkingDirectory>#DemosFolder#</WorkingDirectory>
+	</Task>
+	<Task>
+		<ID>50</ID>
+		<Description>create new checkfile w/current directory set and checkfile in currentdir</Description>
+		<Args>c #TempRND# *.*</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinarySample></BinarySample>
+		<BinaryExpected></BinaryExpected>
+		<WorkingDirectorySet>TRUE</WorkingDirectorySet>
+		<WorkingDirectory>#TempFolder#</WorkingDirectory>
+	</Task>
+	<Task>
+		<ID>51</ID>
+		<Description>create new checkfile w/current directory set and checkfile in currentdir</Description>
+		<Args>c #TempRND# .</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinarySample></BinarySample>
+		<BinaryExpected></BinaryExpected>
+		<WorkingDirectorySet>TRUE</WorkingDirectorySet>
+		<WorkingDirectory>#TempFolder#</WorkingDirectory>
+	</Task>
+	<Task>
+		<ID>52</ID>
+		<Description>create new checkfile w/current directory set and checkfile in currentdir</Description>
+		<Args>c #TempRND# .\</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>FALSE</BinaryComp>
+		<BinarySample></BinarySample>
+		<BinaryExpected></BinaryExpected>
+		<WorkingDirectorySet>TRUE</WorkingDirectorySet>
+		<WorkingDirectory>#TempFolder#</WorkingDirectory>
+	</Task>
+	<Task>
+		<ID>56</ID>
+		<Description>c w/ default algo, wildcard and file set in agrs</Description>
+		<Args>c #TempFolder##TempRND# #DemosFolder#*.txt #DemosFolder#d.111</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>TRUE</BinaryComp>
+		<BinaryExpected>#TempFolder##TempRND#</BinaryExpected>
+		<BinarySample>#StartFolder##SubFolderPlatform#0018.checkfile</BinarySample>    
+	</Task>
+	<Task>
+		<ID>57</ID>
+		<Description>c w/ default algo, folder, wildcard and file set in agrs</Description>
+		<Args>c #TempFolder##TempRND# #DemosFolder#*.txt #DemosFolder#e.222 #DemosFolder#L12</Args>
+		<ExitCodeExpected>0</ExitCodeExpected>
+		<BinaryComp>TRUE</BinaryComp>
+		<BinaryExpected>#TempFolder##TempRND#</BinaryExpected>
+		<BinarySample>#StartFolder##SubFolderPlatform#0019.checkfile</BinarySample>    
+	</Task>
+</TestTasksList>
