@@ -40,7 +40,7 @@ begin
 
 	numbering 1 {
 		Section "File Entry ~"
-			uint32 "Record Size"
+			uint32 "Record Size, bytes"
 			uint32 "Files Size, High"
 			uint32 "Files Size, Low"
 			IfEqual MD2 1
