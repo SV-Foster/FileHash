@@ -41,6 +41,8 @@ begin
 	numbering 1 {
 		Section "File Entry ~"
 			uint32 "Record Size, bytes"
+			hex 8 "Files Size (HEX)"
+			move -8
 			uint32 "Files Size, High"
 			uint32 "Files Size, Low"
 			IfEqual MD2 1
